@@ -23,9 +23,6 @@ public class MyGdxGame extends ApplicationAdapter {
 	@Override
 	public void create () {
 
-
-
-
 		FreeTypeFontGenerator generator = new FreeTypeFontGenerator(Gdx.files.internal("Signika-Bold.ttf"));
 
 		FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
@@ -45,7 +42,7 @@ public class MyGdxGame extends ApplicationAdapter {
 		label.setY(200);
 
 		label.setWidth(width);
-		label.setText("Automatisch aufgegeben");
+		label.setText("Automatische aufgegeben");
 		label.layout();
 		label.setHeight(label.getPrefHeight());
 
