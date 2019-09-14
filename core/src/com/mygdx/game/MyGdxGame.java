@@ -24,19 +24,19 @@ public class MyGdxGame extends ApplicationAdapter {
 	public void create () {
 
 
-		Label.LabelStyle style = new Label.LabelStyle();
+
 
 		FreeTypeFontGenerator generator = new FreeTypeFontGenerator(Gdx.files.internal("Signika-Bold.ttf"));
+
 		FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
 		parameter.size = 76;
+
 		BitmapFont bitmapFont = generator.generateFont(parameter);
 		bitmapFont.getData().setScale(1 / 2.23f);
 
-		//bitmapFont.getRegion().getTexture().setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
-		//bitmapFont.getData().setScale(1 / GameManager.getI().getScreenRatio());
 
+		Label.LabelStyle style = new Label.LabelStyle();
 		style.font = bitmapFont;
-		style.font.getData().markupEnabled = true;
 
 		label = new Label("", style);
 		label.setAlignment(Align.center);
@@ -45,7 +45,6 @@ public class MyGdxGame extends ApplicationAdapter {
 		label.setY(200);
 
 		label.setWidth(width);
-		System.out.println(label.getWidth());
 		label.setText("Automatisch aufgegeben");
 		label.layout();
 		label.setHeight(label.getPrefHeight());
